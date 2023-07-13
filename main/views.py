@@ -148,11 +148,11 @@ def AddCategory(request):
 
 def logoutUser(request):
     logout(request)
-    messages.success(request, 'Вы успенно вышли из учетной запики!')
+    messages.success(request, 'Вы успенно вышли из учетной записи!')
     return redirect("/")
 
 
-def SingUpUserView(request):
+def SignUpUserView(request):
     logger.info('Обработка представления "SingUpUserView"')
     try:
         if request.method == 'POST':

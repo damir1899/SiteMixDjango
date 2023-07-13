@@ -893,3 +893,19 @@ Traceback (most recent call last):
 main.models.Transaction.MultipleObjectsReturned: get() returned more than one Transaction -- it returned 2!
 /home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py changed, reloading.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Обработка представления "Index"
+/home/damir/Lessons/RestFramework/MySiteRestAPI/main/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/damir/Lessons/RestFramework/MySiteRestAPI/main/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Обработка представления "Posts"
+Обработка представления "Index"
+Обработка представления "Index"
+Обработка представления "Posts"
+Обработка представления "ContactView"
+Обработка представления "AnimeView"
+/home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py changed, reloading.
+Watching for file changes with StatReloader

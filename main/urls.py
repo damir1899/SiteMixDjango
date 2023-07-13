@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import (Add_Post, AddCategory, AnimeView, ContactView,
-                    SignInUserView, SingUpUserView, UserEditProfileView,
+                    SignInUserView, SignUpUserView, UserEditProfileView,
                     UserProfileView, index, logoutUser, posts, generate_qr, weather, TransactionView)
 
 urlpatterns = [
@@ -10,7 +10,7 @@ urlpatterns = [
     path("posts/", posts),
     path("add/", Add_Post),
     path("category/", AddCategory),
-    path("singup/", SingUpUserView),
+    path("signup/", SignUpUserView),
     path("logout/", logoutUser),
     path("login/", SignInUserView),
     path("contact/", ContactView),
