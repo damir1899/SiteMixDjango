@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Перевод клиенту AssortyBank{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<main>
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+            <form class="card shadow-sm text-bg-dark" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.sender_phone }}
+                {{ form.recipient_phone }}
+                {{ form.summa }}
+                <button class="btn btn-outline-light" type="submit">
+                    Отправить
+                </button>
+            </form>
+
+        </div>
+    </div>
+</main>
+{% else %}
+<main>
+    <div class="album py-5 bg-body-tertiary">
+        <div class="container">
+            <h1>Пока в разработке</h1>
+        </div>
+    </div>
+</main>
+{% endif %}
+{% endblock %}
