@@ -18,5 +18,5 @@ urlpatterns = [
     path('profile/edit/', UserEditProfileView),
     path('qr/', generate_qr),
     path('weather/almaty/', weather),
-    path('profile/transaction', TransactionView),
+    path('profile/transaction/', TransactionView, name='transaction_url'),
 ]

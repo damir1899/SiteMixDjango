@@ -300,10 +300,17 @@ def TransactionView(request):
                 transaction = form.save(commit=False)
                 transaction.sender_phone = request.user.profile.phone
                 transaction.save()
+                return redirect('transaction_url')
         else:        
             form = TransactionForm(initial={
                 'sender_phone': request.user.profile.phone
             })
-        return render(request, 'Transaction/transaction.html', {'form': form})
+        transactions = Transaction.objects.filter(
+                    sender_phone=request.user.profile.phone)
+        context = {
+                'form': form,
+                'transactions': transactions,
+            }
+        return render(request, 'Transaction/transaction.html', context=context)
     else:
         return redirect('/')

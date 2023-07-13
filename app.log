@@ -746,3 +746,150 @@ Traceback (most recent call last):
   File "/home/damir/Lessons/RestFramework/MySiteRestAPI/main/models.py", line 167, in save
     raise Exception('Профиль получателя не найден')
 Exception: Профиль получателя не найден
+Watching for file changes with StatReloader
+Internal Server Error: /profile/transaction
+Traceback (most recent call last):
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/profile/transaction/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+Обработка представления "UserProfileView"
+Internal Server Error: /profile/transaction/
+Traceback (most recent call last):
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py", line 308, in TransactionView
+    transaction = Transaction.objects.get(
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/db/models/query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+main.models.Transaction.MultipleObjectsReturned: get() returned more than one Transaction -- it returned 2!
+/home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /profile/transaction/
+Traceback (most recent call last):
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py", line 310, in TransactionView
+    'transaction': Transaction.objects.get(
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/db/models/query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+main.models.Transaction.MultipleObjectsReturned: get() returned more than one Transaction -- it returned 2!
+Internal Server Error: /admin/main/transaction/
+Traceback (most recent call last):
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 154, in get_deleted_objects
+    to_delete = collector.nested(format_callback)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 221, in nested
+    roots.extend(self._nested(root, seen, format_callback))
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 207, in _nested
+    ret = [format_callback(obj)]
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 129, in format_callback
+    no_edit_link = "%s: %s" % (capfirst(opts.verbose_name), obj)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/main/models.py", line 179, in __str__
+    return f"{self.sender_phone_id} -> {self.recipient_phone_id}"
+AttributeError: 'Transaction' object has no attribute 'sender_phone_id'
+Internal Server Error: /admin/main/transaction/
+Traceback (most recent call last):
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1959, in changelist_view
+    response = self.response_action(
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/actions.py", line 39, in delete_selected
+    ) = modeladmin.get_deleted_objects(queryset, request)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2101, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 154, in get_deleted_objects
+    to_delete = collector.nested(format_callback)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 221, in nested
+    roots.extend(self._nested(root, seen, format_callback))
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 207, in _nested
+    ret = [format_callback(obj)]
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/contrib/admin/utils.py", line 129, in format_callback
+    no_edit_link = "%s: %s" % (capfirst(opts.verbose_name), obj)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/main/models.py", line 179, in __str__
+    return f"{self.sender_phone_id} -> {self.recipient_phone_id}"
+AttributeError: 'Transaction' object has no attribute 'sender_phone_id'
+/home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /profile/transaction/
+Traceback (most recent call last):
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py", line 308, in TransactionView
+    transaction = Transaction.objects.get(
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/db/models/query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+main.models.Transaction.MultipleObjectsReturned: get() returned more than one Transaction -- it returned 2!
+/home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /profile/transaction/
+Traceback (most recent call last):
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py", line 308, in TransactionView
+    transactions = Transaction.objects.get(
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/damir/Lessons/RestFramework/MySiteRestAPI/venv/lib/python3.10/site-packages/django/db/models/query.py", line 640, in get
+    raise self.model.MultipleObjectsReturned(
+main.models.Transaction.MultipleObjectsReturned: get() returned more than one Transaction -- it returned 2!
+/home/damir/Lessons/RestFramework/MySiteRestAPI/main/views.py changed, reloading.
+Watching for file changes with StatReloader
